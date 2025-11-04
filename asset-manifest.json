@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Hackflix/static/css/main.51e4f20f.css",
+    "main.js": "/Hackflix/static/js/main.ea1fd3b4.js",
+    "static/media/banner.jpg": "/Hackflix/static/media/banner.73e1e298a868493aad0d.jpg",
+    "index.html": "/Hackflix/index.html",
+    "main.51e4f20f.css.map": "/Hackflix/static/css/main.51e4f20f.css.map",
+    "main.ea1fd3b4.js.map": "/Hackflix/static/js/main.ea1fd3b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51e4f20f.css",
+    "static/js/main.ea1fd3b4.js"
+  ]
+}
