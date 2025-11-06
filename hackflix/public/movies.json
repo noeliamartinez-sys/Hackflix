@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Cinema Paradiso",
+    "poster_path": "/posters/poster1.jpg",
+    "vote_average": 8.5
+  },
+  {
+    "id": 2,
+    "title": "Forrest Gump",
+    "poster_path": "/posters/poster2.jpg",
+    "vote_average": 8.0
+  },
+  {
+    "id": 3,
+    "title": "Braveheart",
+    "poster_path": "/posters/poster3.jpg",
+    "vote_average": 7.8
+  },
+  {
+    "id": 4,
+    "title": "Indie Movie",
+    "poster_path": "/posters/poster4.jpg",
+    "vote_average": 5.2
+  },
+  {
+    "id": 5,
+    "title": "Peli mala",
+    "poster_path": "/posters/poster5.jpg",
+    "vote_average": 3.3
+  }
+]
