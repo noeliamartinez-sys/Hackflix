@@ -1,34 +1,22 @@
-import React, { useState, useEffect } from "react";
-import MoviesGrid from "./components/MoviesGrid";
-import RatingFilter from "./components/RatingFilter";
-import "./index.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import MovieDetails from "./pages/MovieDetails";
+import MovieCard from "./components/MovieCard";
 
 function App() {
-  const [movies, setMovies] = useState([]);
-  const [filteredMovies, setFilteredMovies] = useState([]);
-  const [minRating, setMinRating] = useState(0);
-
-  useEffect(() => {
-    fetch("/movies.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setMovies(data);
-        setFilteredMovies(data);
-      })
-      .catch((error) => console.error("Error al cargar las películas:", error));
-  }, []);
-
-  useEffect(() => {
-    const filtered = movies.filter((movie) => movie.vote_average >= minRating);
-    setFilteredMovies(filtered);
-  }, [minRating, movies]);
-
   return (
-    <div className="app">
-      <h1>🎬 Hackflix — Parte 1</h1>
-      <RatingFilter minRating={minRating} setMinRating={setMinRating} />
-      <MoviesGrid movies={filteredMovies} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Home */}
+        <Route path="/pelicula/:id" element={<MovieDetails />} />{" "}
+        {/* Detalle */}
+        <Route
+          path="*"
+          element={<h2>Error 404: Página no encontrada</h2>}
+        />{" "}
+        {/* 404 */}
+      </Routes>
+    </Router>
   );
 }
 

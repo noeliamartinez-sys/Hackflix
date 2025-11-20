@@ -28,5 +28,19 @@
     "title": "Peli mala",
     "poster_path": "/posters/poster5.jpg",
     "vote_average": 3.3
+  },
+  {
+    "id": 6,
+    "title": "Matrix",
+    "poster_path": "/posters/matrix.jpg",
+    "vote_average": 5,
+    "overview": "Neo descubre la verdad..."
+  },
+  {
+    "id": 7,
+    "title": "Titanic",
+    "poster_path": "/posters/titanic.jpg",
+    "vote_average": 4,
+    "overview": "Dos jóvenes se enamoran en el viaje..."
   }
 ]

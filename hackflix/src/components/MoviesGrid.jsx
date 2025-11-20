@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import MovieCard from "./MovieCard";
+import Modal from "./Modal";
 
-function MoviesGrid({ movies }) {
+export default function MoviesGrid({ movies }) {
+  const [selectedMovie, setSelectedMovie] = useState(null);
+
   return (
-    <div className="movies-grid">
-      {movies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
-      ))}
-    </div>
+    <>
+      <div className="movies-grid">
+        {movies.map((movie) => (
+          <div
+            key={movie.id}
+            onClick={() => setSelectedMovie(movie)}
+            style={{ cursor: "pointer" }}
+          >
+            <MovieCard movie={movie} />
+          </div>
+        ))}
+      </div>
+
+      <Modal movie={selectedMovie} onClose={() => setSelectedMovie(null)} />
+    </>
   );
 }
-
-export default MoviesGrid;
